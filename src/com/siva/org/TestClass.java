@@ -3,6 +3,8 @@
  */
 package com.siva.org;
 
+import java.util.List;
+
 /**
  * 
  */
@@ -12,8 +14,11 @@ public class TestClass {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		MysqlUtil util = new MysqlUtil();
+		
+		List<Customer> customers =  util.getCustomerData();
+		customers.stream().forEach(System.out::println);
+		
 	}
 
 }
